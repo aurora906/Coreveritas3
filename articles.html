@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070708">
+  <meta name="description" content="Bücher und Artikel von COREVERITAS. Gedanken über Wahrheit, Grenzen und Klarheit." />
+  <title>COREVERITAS | Bücher &amp; Artikel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="articles">
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a class="nav-link" href="index.html">Start</a>
+      <a class="nav-link is-active" href="articles.html">Bücher &amp; Artikel</a>
+      <a class="nav-link nav-admin" href="admin.html">Veröffentlichung</a>
+    </nav>
+    <a class="header-mark" href="index.html">Zur Wahrheit zurück <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="library-main">
+    <section class="library-intro">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Das Archiv</p>
+      <h1>Gedanken,<br><em>die bleiben.</em></h1>
+      <p class="library-description">Worte für das, was du längst fühlst. Ohne Umweg. Ohne Beschönigung.</p>
+      <div class="library-count"><span class="gold-dot"></span> Ein wachsendes Archiv der Klarheit</div>
+    </section>
+
+    <section class="library-content" aria-label="Veröffentlichungen">
+      <div class="filter-bar" role="group" aria-label="Nach Kategorie filtern">
+        <button class="filter-button is-selected" type="button" data-filter="Alle" aria-pressed="true">Alle <span data-count="Alle">0</span></button>
+        <button class="filter-button" type="button" data-filter="Buch" aria-pressed="false">Bücher <span data-count="Buch">0</span></button>
+        <button class="filter-button" type="button" data-filter="Artikel" aria-pressed="false">Artikel <span data-count="Artikel">0</span></button>
+      </div>
+      <div class="entry-grid" id="entry-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Noch keine Veröffentlichungen in dieser Kategorie.</p>
+      <p class="form-message shop-message" id="shop-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <dialog class="reader-dialog" id="reader-dialog" aria-labelledby="reader-title">
+    <button class="dialog-close" type="button" aria-label="Schließen" data-close-dialog>×</button>
+    <p class="eyebrow" id="reader-type"></p>
+    <h2 id="reader-title"></h2>
+    <p class="reader-excerpt" id="reader-excerpt"></p>
+    <div class="reader-body" id="reader-body"></div>
+    <p class="form-message reader-status" id="reader-status" role="status" aria-live="polite"></p>
+    <div class="reader-actions" id="reader-actions" hidden>
+      <span class="reader-price" id="reader-price"></span>
+      <button class="button button-gold" id="reader-download" type="button"></button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <a class="brand-lockup footer-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark footer-wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <p>Weniger Lärm. Mehr Wahrheit.</p>
+    <span>© <span data-year></span> COREVERITAS</span>
+  </footer>
+</body>
+</html>

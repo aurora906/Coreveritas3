@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070708">
+  <meta name="description" content="Veröffentlichungen verwalten." />
+  <title>COREVERITAS | Veröffentlichung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a class="nav-link" href="index.html">Start</a>
+      <a class="nav-link" href="articles.html">Bücher &amp; Artikel</a>
+      <a class="nav-link is-active nav-admin" href="admin.html">Veröffentlichung</a>
+    </nav>
+    <a class="header-mark" href="articles.html">Zum Archiv <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-heading">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Nur für Entwickler</p>
+      <h1>Das Wort<br><em>veröffentlichen.</em></h1>
+      <p>Neue Gedanken ins Archiv bringen. Klar und ohne Umweg.</p>
+    </section>
+
+    <section class="admin-panel" id="login-panel" aria-labelledby="login-title">
+      <div class="panel-kicker">ZUGANG ERFORDERLICH</div>
+      <h2 id="login-title">Willkommen zurück.</h2>
+      <p>Dieser Bereich ist geschützt.</p>
+      <form id="login-form" class="admin-form" novalidate>
+        <label for="admin-password">Passwort</label>
+        <div class="password-row">
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="button button-gold" type="submit">Anmelden <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-message" id="login-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="admin-dashboard" id="admin-dashboard" hidden>
+      <div class="dashboard-topline">
+        <div>
+          <div class="panel-kicker">INHALTE VERWALTEN</div>
+          <h2>Neue Veröffentlichung</h2>
+        </div>
+        <button class="button button-quiet" id="logout-button" type="button">Abmelden</button>
+      </div>
+      <form id="entry-form" class="admin-form entry-form" novalidate>
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="entry-type">Format</label>
+            <select id="entry-type" name="type" required>
+              <option value="Artikel">Artikel</option>
+              <option value="Buch">Buch</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="entry-title">Titel</label>
+            <input id="entry-title" name="title" type="text" maxlength="100" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="entry-excerpt">Kurztext</label>
+          <textarea id="entry-excerpt" name="excerpt" rows="2" maxlength="240" required></textarea>
+        </div>
+        <div class="field-group">
+          <label for="entry-body">Vollständiger Inhalt</label>
+          <textarea id="entry-body" name="body" rows="10"></textarea>
+        </div>
+        <div class="form-grid upload-grid">
+          <div class="field-group">
+            <label for="entry-price">Preis in Euro</label>
+            <input id="entry-price" name="price" type="number" min="0" max="9999999.99" step="0.01" value="0" required>
+          </div>
+          <div class="field-group">
+            <label for="entry-file">Datei (PDF, EPUB, MOBI, DOCX, TXT, RTF oder ZIP; auf Netlify höchstens 4 MB)</label>
+            <input id="entry-file" name="file" type="file" accept=".pdf,.epub,.mobi,.azw3,.docx,.txt,.rtf,.zip">
+          </div>
+        </div>
+        <div class="submit-row">
+          <p class="form-message" id="entry-message" role="status" aria-live="polite"></p>
+          <button class="button button-gold" type="submit">Veröffentlichen <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <div class="manage-heading">
+        <h2>Veröffentlichte Inhalte</h2>
+        <span id="admin-entry-count">0 Einträge</span>
+      </div>
+      <div class="manage-list" id="manage-list"></div>
+      <p class="empty-state" id="admin-empty-state" hidden>Noch keine Inhalte veröffentlicht.</p>
+    </section>
+    <p class="admin-notice">Veröffentlichungen und Dateien werden auf dem Server gespeichert. Für Kartenzahlungen muss Stripe eingerichtet sein.</p>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand-lockup footer-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark footer-wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <p>Weniger Lärm. Mehr Wahrheit.</p>
+    <span>© <span data-year></span> COREVERITAS</span>
+  </footer>
+</body>
+</html>

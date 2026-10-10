@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070708">
+  <meta name="description" content="COREVERITAS. Keine Motivation. Keine leeren Worte. Nur Klarheit." />
+  <title>COREVERITAS | Nur die Wahrheit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a class="nav-link is-active" href="index.html">Start</a>
+      <a class="nav-link" href="articles.html">Bücher &amp; Artikel</a>
+      <a class="nav-link nav-admin" href="admin.html">Veröffentlichung</a>
+    </nav>
+    <a class="header-mark" href="articles.html">Worte, die bleiben <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Ein Ort für das Ungesagte</p>
+        <h1 id="hero-title">COREVERITAS</h1>
+        <div class="manifesto">
+          <p>Keine Motivation. Keine leeren Worte.<br><strong>Nur die <span style="color: var(--gold)"> Wahrheit.</span></strong></p>
+          <p>Roh. Direkt. Ohne Filter.</p>
+          <p>Für die, die zu viel gegeben haben.<br>Für die, die zu lange geschwiegen haben.<br>Für die, die wissen, dass etwas nicht stimmt…<br>aber es noch nicht aussprechen konnten.</p>
+          <p>Hier bekommst du keine Antworten.<br><strong>Hier bekommst du <span style="color: var(--gold)"> Klarheit.
+          </span></strong></p>
+          <p>Wenn das trifft… bleib hier. <span class="heart-mark" aria-label="schwarzes Herz">🖤</span></p>
+        </div>
+        <a class="text-link hero-link" href="articles.html"><span style="color: var(--gold)"> Gedanken entdecken</span> <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-coordinate" aria-hidden="true">47° 22′ 12.0″ N&nbsp;&nbsp; 8° 32′ 30.0″ E</div>
+      <div class="hero-caption">DIE WAHRHEIT BRAUCHT KEINEN APPLAUS.</div>
+    </section>
+
+    <section class="subscribe-section" aria-labelledby="subscribe-title">
+      <div class="subscribe-intro">
+        <p class="eyebrow eyebrow-dark">Ein Brief, wenn es etwas zu sagen gibt</p>
+        <h2 id="subscribe-title">Klarheit kennt<br><em>keinen Zeitplan.</em></h2>
+        <p>Keine Flut. Kein Lärm. Nur Worte, die einen Grund haben.</p>
+      </div>
+      <form class="subscribe-form" id="subscribe-form" novalidate>
+        <label for="subscriber-email">Deine E-Mail-Adresse</label>
+        <div class="email-row">
+          <input id="subscriber-email" name="email" type="email" placeholder="name@beispiel.de" autocomplete="email" required>
+          <button class="button button-gold" type="submit">Dabei sein <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-note">Mit deiner Anmeldung stimmst du dem Erhalt gelegentlicher E-Mails zu.</p>
+        <p class="form-message" id="subscribe-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand-lockup footer-lockup" href="index.html" aria-label="COREVERITAS Startseite">
+      <span class="brand-logo"><img src="logo.jpg" alt="" width="68" height="68"></span>
+      <span class="wordmark footer-wordmark">CORE<span>VERITAS</span><i>.</i></span>
+    </a>
+    <p>Weniger Lärm. Mehr Wahrheit.</p>
+    <span>© <span data-year></span> COREVERITAS</span>
+  </footer>
+</body>
+</html>
